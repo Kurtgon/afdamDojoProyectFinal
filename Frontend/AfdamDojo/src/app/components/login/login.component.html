@@ -1,0 +1,14 @@
+<p>login DojoAfdam Login</p>
+
+<form [formGroup]="loginForm">
+  <label > Usuario: </label>
+  <input type="text" id="usuario" formControlName="usuario" />
+  <div *ngIf="this.loginForm.controls.usuario.errors?.required">Este campo es obligatorio</div>
+  <div *ngIf="this.loginForm.controls.usuario.errors?.minlength">Este campo tiene que tener mínimo 4 caracteres</div>
+  <label > Password: </label>
+  <input type="password" id="password" formControlName="password" />
+  <div *ngIf="this.loginForm.controls.password.errors?.required">Este campo es obligatorio</div>
+  <div *ngIf="this.loginForm.controls.password.errors?.minlength">Este campo tiene que tener mínimo 8 caracteres</div>
+  <button type="button" (click)="autenticaUsuario()">Entrar</button>
+</form>
+
