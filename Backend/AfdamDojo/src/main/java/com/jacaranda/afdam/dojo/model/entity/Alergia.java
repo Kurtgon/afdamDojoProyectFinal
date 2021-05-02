@@ -27,6 +27,8 @@ public class Alergia {
 	@Enumerated(EnumType.STRING)
 	private AlergiaGravedad serious;
 
+	private String alergyName;
+
 	// Relación con Alumno Many to Many
 	@ManyToMany(targetEntity = Alumno.class, cascade = { CascadeType.PERSIST, CascadeType.MERGE })
 	private Set<Alumno> students;
@@ -39,12 +41,31 @@ public class Alergia {
 
 	// Get y Set
 
+	public Alergia(AlergiaGravedad serious, String alergyName) {
+		super();
+		this.serious = serious;
+		this.alergyName = alergyName;
+		this.students = new HashSet<>();
+	}
+
 	public Set<Alumno> getStudents() {
 		return students;
 	}
 
 	public void setStudents(Set<Alumno> students) {
 		this.students = students;
+	}
+
+	public String getAlergyName() {
+		return alergyName;
+	}
+
+	public void setAlergyName(String alergyName) {
+		this.alergyName = alergyName;
+	}
+
+	public AlergiaGravedad getSerious() {
+		return serious;
 	}
 
 }

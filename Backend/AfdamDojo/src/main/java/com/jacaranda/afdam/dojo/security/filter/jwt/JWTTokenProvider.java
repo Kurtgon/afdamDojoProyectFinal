@@ -19,10 +19,13 @@ public class JWTTokenProvider {
 	private static SecretKey key;
 
 	public static String generateToken(User user) {
-		return Jwts.builder().setHeaderParam(Header.TYPE, Header.JWT_TYPE).setSubject(user.getId().toString())
+		return Jwts.builder()
+				.setHeaderParam(Header.TYPE, Header.JWT_TYPE)
+				.setSubject(user.getId().toString())
 				.setId(user.getId().toString()).setIssuedAt(new Date(System.currentTimeMillis()))
 				.setExpiration(new Date(System.currentTimeMillis() + SecurityConstants.EXPIRATION_TIME))
-				.signWith(getKey(), SignatureAlgorithm.HS512).compact();
+				.signWith(getKey(), SignatureAlgorithm.HS512)
+				.compact();
 	}
 
 	public static boolean validateToken(String token) {

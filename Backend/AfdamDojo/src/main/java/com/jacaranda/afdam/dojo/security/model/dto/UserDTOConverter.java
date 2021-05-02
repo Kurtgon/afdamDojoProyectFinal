@@ -10,6 +10,7 @@ import org.springframework.stereotype.Component;
 import com.jacaranda.afdam.dojo.security.model.User;
 import com.jacaranda.afdam.dojo.security.model.enums.UserRole;
 
+
 @Component
 public class UserDTOConverter {
 
@@ -17,6 +18,7 @@ public class UserDTOConverter {
 	@Autowired
 	private PasswordEncoder passwordEncoder;
 
+	
 	// Creamos el método para convertir de un usuario a un dto
 	public User fromDTOToUsuario(UserDTO dto) {
 		// Creamos un Usuario
@@ -46,4 +48,6 @@ public class UserDTOConverter {
 		dto.setRoles(user.getRoles());
 		return dto;
 	}
-}	
+
+
+}

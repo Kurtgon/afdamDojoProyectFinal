@@ -77,9 +77,19 @@ public abstract class Persona {
 	}
 
 	// Get y Set
+	
+	
 
 	public String getName() {
 		return name;
+	}
+
+	public User getUser() {
+		return user;
+	}
+
+	public void setUser(User user) {
+		this.user = user;
 	}
 
 	public void setName(String name) {
@@ -102,11 +112,11 @@ public abstract class Persona {
 		this.birthdate = birthdate;
 	}
 
-	public String getCurm() {
+	public String getCurp() {
 		return curp;
 	}
 
-	public void setCurm(String curp) {
+	public void setCurp(String curp) {
 		this.curp = curp;
 	}
 
