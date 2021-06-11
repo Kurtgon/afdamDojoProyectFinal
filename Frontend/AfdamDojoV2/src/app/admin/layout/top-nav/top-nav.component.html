@@ -1,0 +1,50 @@
+<mat-toolbar color="primary" class="fix-nav">
+    <button type="button" mat-icon-button (click)="toggleSidebar()">
+        <mat-icon aria-label="Side nav toggle menu">menu</mat-icon>
+
+    </button>
+
+    <div class="nav-brand">
+        AfdamDojo
+    </div>
+
+    <span class="nav-spacer"></span>
+    <!--Buscador-->
+    <!--
+    <form class="hidden-sm" style="margin-right: 20px; margin-top: 8px;">
+        <mat-form-field sytle="font-size: 1rem;">
+            <input matInput placeholder="Búsqueda">
+        </mat-form-field>
+    </form>
+    -->
+    <button class="hiddem-sm" mat-icon-button [mat-menu-trigger-for]="profile">
+        <mat-icon>
+            account_circle
+        </mat-icon>
+    </button>
+
+    <mat-menu #profile="matMenu" [overlapTrigger]="false">
+        <button mat-menu-item>
+            <mat-icon>
+                person
+            </mat-icon>
+            <span>Perfil</span>
+        </button>
+
+        <button mat-menu-item>
+            <mat-icon>
+                settings
+            </mat-icon>
+            <span>Configuración</span>
+        </button>
+
+        <button mat-menu-item>
+            <mat-icon>
+                logout
+            </mat-icon>
+            <span>Cerrar Sesión</span>
+        </button>
+    </mat-menu>
+
+</mat-toolbar>
+
