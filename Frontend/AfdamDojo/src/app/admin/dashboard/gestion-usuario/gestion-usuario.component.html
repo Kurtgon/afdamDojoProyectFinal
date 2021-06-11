@@ -1,0 +1,61 @@
+
+<!--
+<table mat-table [dataSource]="dataSource" matSort class="mat-elevation-z8">
+
+<!-- Columna de la tabla cabecera 
+<ng-container *ngFor="let columna of columnas" matColumnDef = {{columna.name}}>
+    <th mat-header-cell *matHeaderCellDef mat-sort-header> {{columna.cabecera}}</th>
+    <th mat-cell *matCellDef="let element">{{element[columna.name]}}</th>
+
+    <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+    <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+
+</ng-container>
+
+</table>
+
+
+
+-->
+
+<app-table></app-table>
+<!--
+<div class="main">
+    <h1>Gestión de Usuarios</h1>
+    <h3>Alumnos</h3>
+    <div class="table">
+        <table>
+            <tr>
+                <th>Nombre</th>
+                <th>Apellidos</th>
+                <th>Curp</th>
+                <th></th>
+            </tr>
+            <tr *ngFor="let alumno of alumnos">
+                <td>{{alumno.name}}</td>
+                <td>{{alumno.surnames}}</td>
+                <td>{{alumno.curp}}</td>
+                <button (click)="detalles()">Más Detalles</button>
+            </tr>
+        </table>
+    </div>
+
+    <h3>Profesores</h3>
+    <div class="table">
+        <table>
+            <tr>
+                <th>Nombre</th>
+                <th>Apellidos</th>
+                <th>Curp</th>
+                <th></th>
+            </tr>
+            <tr *ngFor="let profesor of profesores">
+                <td>{{profesor.name}}</td>
+                <td>{{profesor.surnames}}</td>
+                <td>{{profesor.curp}}</td>
+                <button (click)="detalles()">Más Detalles</button>
+            </tr>
+        </table>
+</div>
+
+-->

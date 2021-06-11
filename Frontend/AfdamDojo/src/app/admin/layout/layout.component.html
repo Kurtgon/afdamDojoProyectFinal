@@ -1,0 +1,28 @@
+<div class="layout-container font-regular mat-app-background">
+    <!-- Botón hamburguesa -->
+    <app-top-nav (sideNavToggled)="onToolbarMenuToggle()"></app-top-nav>
+
+    <!-- Contenedor del sidenav -->
+    <mat-sidenav-container class="sidenav-container" [style.marginTop.px]="toolBarHeight" [hasBackdrop]="false">
+
+        <mat-sidenav #snav position="start" disableClose="true" role="navigation" class="sidenav mat-elevation-z10"
+         [mode] = "sideNavMode" [(opened)]="sideNavDefaultOpened" [autoFocus]="false" [ngStyle]="{'width.px': isExpanded ? openedWitdh: closedWitdh}">
+        
+        <app-side-nav *ngIf="showFullMenu; else elseBlock"></app-side-nav>
+
+        <ng-template #elseBlock>
+            <app-side-nav-closed></app-side-nav-closed>
+        </ng-template>
+        
+        </mat-sidenav>
+
+        <mat-sidenav-container role="origin" id="sidenav-content"
+            >
+
+            <div class="main-container">
+                <router-outlet></router-outlet>
+            </div>
+
+        </mat-sidenav-container>
+    </mat-sidenav-container>
+</div>
