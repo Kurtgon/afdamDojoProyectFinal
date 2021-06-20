@@ -1,0 +1,21 @@
+<div class="container">
+    <div card class="detallesProfesor">
+        
+        <img  class = "fotoProfesor" src="../../../../../assets/foto_perfil_default.png">
+        
+        <h1>{{profesor.name}} {{profesor.surnames}}</h1>
+        
+        <p><mat-icon aria-hidden="false" aria-label="crear alumno icon"> cake</mat-icon>&nbsp; {{profesor.birthdate | date:'MM/dd/yyyy'}}</p>
+        <p><mat-icon aria-hidden="false" aria-label="crear alumno icon"> badge</mat-icon>&nbsp; curp: {{profesor.curp}}</p>
+        <p><mat-icon aria-hidden="false" aria-label="crear alumno icon"> call</mat-icon>&nbsp; {{profesor.tlf}}</p>
+        <p><mat-icon aria-hidden="false" aria-label="crear alumno icon"> home</mat-icon>&nbsp; {{profesor.address}}</p>
+        <p><mat-icon aria-hidden="false" aria-label="crear alumno icon"> email</mat-icon>&nbsp; {{profesor.email}}</p>
+        
+        
+        <mat-card-actions>
+            <button class="botonCard" mat-button routerLink="/gestionUsuarios">Atrás</button>
+            <button class="botonCard" mat-button (click)="modificar()">Modificar</button>
+        </mat-card-actions>
+
+    </div>
+</div>

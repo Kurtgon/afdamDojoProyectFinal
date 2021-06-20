@@ -1,5 +1,7 @@
 // Datos del alumno
-export interface Alumno {
+export class Alumno {
+    username: string;
+    password: string;
     name: string;
     surnames: string;
     birthdate: string;
@@ -7,10 +9,10 @@ export interface Alumno {
     tlf: string;
     address: string;
     email: string;
-    picture: Blob;
     contact: string;
     discipline?: string;
     allergy?: string;
+    picture?: Blob;
 }
 
 

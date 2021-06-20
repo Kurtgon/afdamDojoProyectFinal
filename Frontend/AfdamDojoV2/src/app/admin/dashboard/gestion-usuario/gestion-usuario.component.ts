@@ -16,7 +16,7 @@ import { Router } from '@angular/router';
   templateUrl: './gestion-usuario.component.html',
   styleUrls: ['./gestion-usuario.component.scss']
 })
-export class GestionUsuarioComponent implements OnInit,AfterViewInit {
+export class GestionUsuarioComponent implements OnInit {
 
     alumnos: Alumno[] = [];
     profesores: Profesor[] = []; 
@@ -24,27 +24,11 @@ export class GestionUsuarioComponent implements OnInit,AfterViewInit {
   constructor(private gestionUsuarioService: GestionUsuarioService, private router: Router){}   
 
 
-  
-  /* Tabla con filtro de ordenación */
-  
-  //Variables
-  displayedColumns: string[] = ['name', 'surnames', 'curp', 'more'];
-
-
-
   ngOnInit(): void {
-    this.gestionUsuarioService.obtenerAlumnos().subscribe(alumnos => this.alumnos = alumnos);
-    this.gestionUsuarioService.obtenerProfesores().subscribe(profesores => this.profesores = profesores);
-  }
-
-  //@ViewChild(MatSort) sort: MatSort;
-
-  ngAfterViewInit () {
-    //this.dataSource.sort = this.sort;
-  }
-
-  detalles(){
     
   }
+
+
+ 
 
 }

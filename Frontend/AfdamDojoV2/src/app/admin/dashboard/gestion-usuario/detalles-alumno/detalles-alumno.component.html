@@ -1,0 +1,24 @@
+<div class="container">
+    <div card class="detallesAlumno">
+        
+        <img  class = "fotoAlumno" src="../../../../../assets/foto_perfil_default.png">
+        
+        <h1>{{alumno.name}} {{alumno.surnames}}</h1>
+        
+        <p><mat-icon aria-hidden="false" aria-label="crear alumno icon"> cake</mat-icon>&nbsp; {{alumno.birthdate | date:'MM/dd/yyyy'}}</p>
+        <p><mat-icon aria-hidden="false" aria-label="crear alumno icon"> badge</mat-icon>&nbsp; curp: {{alumno.curp}}</p>
+        <p><mat-icon aria-hidden="false" aria-label="crear alumno icon"> call</mat-icon>&nbsp; {{alumno.tlf}}</p>
+        <p><mat-icon aria-hidden="false" aria-label="crear alumno icon"> home</mat-icon>&nbsp; {{alumno.address}}</p>
+        <p><mat-icon aria-hidden="false" aria-label="crear alumno icon"> email</mat-icon>&nbsp; {{alumno.email}}</p>
+        <p><mat-icon aria-hidden="false" aria-label="crear alumno icon"> call</mat-icon>&nbsp; {{alumno.contact}}</p>
+        
+        <p *ngIf="alumno.discipline">discipline: {{alumno.discipline}}</p>
+        <p *ngIf="alumno.allergy">allergy: {{alumno.allergy}}</p>
+        
+        <mat-card-actions>
+            <button class="botonCard" mat-button routerLink="/gestionUsuarios">Atrás</button>
+            <button class="botonCard" mat-button (click)="modificar()">Modificar</button>
+        </mat-card-actions>
+
+    </div>
+</div>

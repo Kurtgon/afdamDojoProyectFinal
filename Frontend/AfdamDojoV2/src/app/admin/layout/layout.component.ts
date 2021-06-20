@@ -10,7 +10,7 @@ import { MediaObserver, MediaChange } from '@angular/flex-layout';
 })
 export class LayoutComponent implements OnInit {
 
-  @ViewChild(MatSidenavContainer) sidenavContainer: MatSidenavContainer;
+  @ViewChild( MatSidenavContainer ) sidenavContainer: MatSidenavContainer;
   @ViewChild('snav') sideNav: MatSidenav;
 
   sideNavDefaultOpened = true;
@@ -27,7 +27,6 @@ export class LayoutComponent implements OnInit {
         media: MediaObserver
   ) {
     
-
     this.mediaWatcher = media.media$.subscribe((change: MediaChange) => {
 
       if (change.mqAlias === 'sm' || change.mqAlias === 'xs') {
@@ -51,16 +50,16 @@ export class LayoutComponent implements OnInit {
       } else {
         this.toolBarHeight = 64;
       }
-
-    })
+    });
   }
 
   ngOnInit(): void {
+    this.sidenavContainer = null;
   }
 
   ngAfterViewInit(): void {
-    this.sidenavContainer.scrollable.elementScrolled().subscribe((a) => {
-    });
+   // this.sidenavContainer.scrollable.elementScrolled().subscribe((a) => {
+    //});
   }
 
   ngOnDestry(): void {

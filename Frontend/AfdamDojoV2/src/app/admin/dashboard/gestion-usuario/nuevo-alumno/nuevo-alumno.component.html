@@ -1,0 +1,176 @@
+<div class="container">
+    <div class="alumnoCard">
+        <mat-card-header>
+            <mat-card-title>Alumno</mat-card-title>
+        </mat-card-header>
+        <mat-card-subtitle>Crear un nuevo alumno</mat-card-subtitle>
+        <mat-card-content>
+            <form [formGroup]="alumnoForm" (submit)="crearAlumno()">
+                <!-- Campo username-->
+                <div class="form-group row">
+                    <label for="username" class="field">Username</label>
+                    <div class="col-sm-9">
+                        <div class="input-group" fxLayout="row" fxLayoutAlign="space-between center">
+                            <div class="icon_group" fxFlex="20">
+                                <mat-icon aria-hidden="false" aria-label="username alumno icon"> person</mat-icon>
+                                <input type="text" formControlName="username" requiered class="form-control"
+                                    id="username" placeholder="Username">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Campo password-->
+                <div class="form-group">
+                    <label for="password" class="field">Password</label>
+                    <div class="col-sm-9">
+                        <div class="input-group" fxLayout="row" fxLayoutAlign="space-between center">
+                            <div class="icon_group" fxFlex="20">
+                                <mat-icon aria-hidden="false" aria-label="password alumno icon"> lock</mat-icon>
+                                <input type="password" formControlName="password" requiered class="form-control"
+                                    id="password" placeholder="password">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Campo name-->
+                <div class="form-group row">
+                    <label for="name" class="field">Name</label>
+                    <div class="col-sm-9">
+                        <div class="input-group" fxLayout="row" fxLayoutAlign="space-between center">
+                            <div class="icon_group" fxFlex="20">
+                                <mat-icon aria-hidden="false" aria-label="nombre alumno icon"> edit</mat-icon>
+                                <input type="text" formControlName="name" requiered class="form-control" id="name"
+                                    placeholder="name">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Campo surnames-->
+                <div class="form-group row">
+                    <label for="surnames" class="field">Surnames</label>
+                    <div class="col-sm-9">
+                        <div class="input-group" fxLayout="row" fxLayoutAlign="space-between center">
+                            <div class="icon_group" fxFlex="20">
+                                <mat-icon aria-hidden="false" aria-label="apellidos alumno icon"> edit</mat-icon>
+                                <input type="text" formControlName="surnames" requiered class="form-control"
+                                    id="surnames" placeholder="surnames">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Campo birthdate-->
+                <div class="form-group row">
+                    <label for="birthdate" class="field">Birthdate</label>
+                    <div class="col-sm-9">
+                        <div class="input-group" fxLayout="row" fxLayoutAlign="space-between center">
+                            <div class="icon_group" fxFlex="20">
+                                <mat-icon aria-hidden="false" aria-label="birthdate alumno icon"> cake</mat-icon>
+                                <input type="text" formControlName="birthdate" requiered class="form-control"
+                                    id="birthdate" placeholder="birthdate">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Campo curp-->
+                <div class="form-group row">
+                    <label for="curp" class="field">Curp</label>
+                    <div class="col-sm-9">
+                        <div class="input-group" fxLayout="row" fxLayoutAlign="space-between center">
+                            <div class="icon_group" fxFlex="20">
+                                <mat-icon aria-hidden="false" aria-label="curp alumno icon"> credit_card</mat-icon>
+                                <input type="text" formControlName="curp" requiered class="form-control" id="curp"
+                                    placeholder="curp">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Campo tlf-->
+                <div class="form-group row">
+                    <label for="tlf" class="field">Tlf</label>
+                    <div class="col-sm-9">
+                        <div class="input-group" fxLayout="row" fxLayoutAlign="space-between center">
+                            <div class="icon_group" fxFlex="20">
+                                <mat-icon aria-hidden="false" aria-label="tlf alumno icon"> phone</mat-icon>
+                                <input type="text" formControlName="tlf" requiered class="form-control" id="tlf"
+                                    placeholder="tlf">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Campo address-->
+                <div class="form-group row">
+                    <label for="address" class="field">Dirección</label>
+                    <div class="col-sm-9">
+                        <div class="input-group" fxLayout="row" fxLayoutAlign="space-between center">
+                            <div class="icon_group" fxFlex="20">
+                                <mat-icon aria-hidden="false" aria-label="address alumno icon"> home</mat-icon>
+                                <input type="text" formControlName="address" requiered class="form-control" id="address"
+                                    placeholder="dirección">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Campo email-->
+                <div class="form-group row">
+                    <label for="email" class="field">Email</label>
+                    <div class="col-sm-9">
+                        <div class="input-group" fxLayout="row" fxLayoutAlign="space-between center">
+                            <div class="icon_group" fxFlex="20">
+                                <mat-icon aria-hidden="false" aria-label="email alumno icon"> email</mat-icon>
+                                <input type="email" formControlName="email" requiered class="form-control" id="email"
+                                    placeholder="email">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Campo contact-->
+                <div class="form-group row">
+                    <label for="contact" class="field">Contacto</label>
+                    <div class="col-sm-9">
+                        <div class="input-group" fxLayout="row" fxLayoutAlign="space-between center">
+                            <div class="icon_group" fxFlex="20">
+                                <mat-icon aria-hidden="false" aria-label="contact alumno icon"> call</mat-icon>
+                                <input type="text" formControlName="contact" requiered class="form-control" id="contact"
+                                    placeholder="contacto">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Campo discipline-->
+                <div class="form-group row">
+                    <label for="discipline" class="field">Disciplinas</label>
+                    <div class="col-sm-9">
+                        <div class="input-group" fxLayout="row" fxLayoutAlign="space-between center">
+                            <select class="form-control" formControlName="discipline">
+                                <option value="">Selecione Disciplina</option>
+                                <option *ngFor="let disciplina of disciplinas" [value]="disciplina">{{disciplina}}
+                                </option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+                <!-- Campo allergy-->
+                <div class="form-group row">
+                    <label for="allergy" class="field">Alergia Gravedad</label>
+                    <div class="col-sm-9">
+                        <div class="input-group" fxLayout="row" fxLayoutAlign="space-between center">
+                            <select class="form-control" formControlName="allergy">
+                                <option value="">Seleccione un nivel de Alergia</option>
+                                <option *ngFor="let alergia of alergiaGravedad" [value]="alergia">{{alergia}}</option>
+
+                            </select>
+                        </div>
+                    </div>
+                </div>
+                <!-- Botón para enviar la información del formulario -->
+                <mat-card-actions>
+                    <button class="botonAlumno" mat-flat-button color="primary" type="submit"
+                        [disabled]="alumnoForm.invalid">Crear</button>
+                    <!-- Botón para cancelar la acción y regresar a la pantalla de gestión de usuarios -->
+                    <button class="botonAlumno" mat-flat-button color="primary"
+                        routerLink="/gestionUsuarios">Cancelar</button>
+                </mat-card-actions>
+            </form>
+        </mat-card-content>
+    </div>
+</div>

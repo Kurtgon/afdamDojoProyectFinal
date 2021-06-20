@@ -13,11 +13,16 @@ import { MatMenuModule } from '@angular/material/menu';
 import { MatSidenavModule } from '@angular/material/sidenav';
 import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatCardModule } from '@angular/material/card';
+import { ScrollingModule } from '@angular/cdk/scrolling'; 
+
 
 import { LayoutComponent } from './layout/layout.component';
 import { SideNavComponent } from './layout/side-nav-left/side-nav/side-nav.component';
 import { SideNavClosedComponent } from './layout/side-nav-left/side-nav-closed/side-nav-closed.component';
 import { TopNavComponent } from './layout/top-nav/top-nav.component';
+import { MatTableModule } from '@angular/material/table';
+
+
 
 
 @NgModule({
@@ -25,7 +30,7 @@ import { TopNavComponent } from './layout/top-nav/top-nav.component';
     LayoutComponent,
     SideNavComponent,
     SideNavClosedComponent,
-    TopNavComponent
+    TopNavComponent,
   ],
   imports: [
     CommonModule,
@@ -40,7 +45,9 @@ import { TopNavComponent } from './layout/top-nav/top-nav.component';
     MatMenuModule,
     MatSidenavModule,
     MatToolbarModule,
-    MatCardModule
+    MatCardModule,
+    MatTableModule,
+    ScrollingModule
   ]
 })
 export class AdminModule { }

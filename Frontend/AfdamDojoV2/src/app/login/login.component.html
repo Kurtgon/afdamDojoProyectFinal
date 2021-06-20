@@ -1,0 +1,38 @@
+<div class="container">
+    <mat-card class="loginCard">
+        <mat-card-header>
+            <mat-card-title>Iniciar Sesión</mat-card-title>
+        </mat-card-header>
+        <img class="d-none d-md-block" mat-card-image src="../../assets/login_AfdamDojo.jpg" alt="">
+        <mat-card-content>
+            <form [formGroup]="loginForm">
+                <!-- Campo Username-->
+                <mat-form-field appearance="outline">
+                    <mat-label>Usuario</mat-label>
+                    <input matInput placeholder="username" formControlName="username">
+                    <mat-hint></mat-hint>
+                    <ng-container *ngIf="loginForm.controls.username.errors != undefined">
+                        <div class="errorEnValidacion" *ngIf="this.loginForm.controls.username.errors?.required">El usuario es obligatorio. Rellene el campo</div>
+                        <div class="errorEnValidacion" *ngIf="this.loginForm.controls.username.errors?.minlength">El usuario tiene que tener más de tres caractéres</div>
+                    </ng-container>
+                </mat-form-field>
+                <!-- Campo Password -->
+                <mat-form-field appearance="outline">
+                    <mat-label>Contraseña</mat-label>
+                    <input matInput [type]="ocultarPassword ? 'password' : 'text'" formControlName="password">
+                    <button mat-icon-button matSuffix (click)="ocultarPassword = !ocultarPassword">
+                        <mat-icon> {{ocultarPassword ? 'visibility_off' : 'visibility' }}</mat-icon>
+                    </button>
+                    <ng-container *ngIf="loginForm.controls.password.errors != undefined">
+                        <div class="errorEnValidacion" *ngIf="this.loginForm.controls.password.errors?.required">El campo password es obligatorio</div>
+                        <div class="errorEnValidacion" *ngIf="this.loginForm.controls.password.errors?.minlength">El campo password tiene que tener mínimo 8 caractéres</div>
+                    </ng-container>
+                </mat-form-field>
+            </form>
+        </mat-card-content>
+        <!-- Botón para enviar el login -->
+        <mat-card-actions>
+            <button mat-raised-button color="primary" [disabled]="loginForm.invalid" (click)="autenticarUsuario()">Entrar</button>
+        </mat-card-actions>
+    </mat-card>
+</div>

@@ -1,5 +1,6 @@
 import { Component, OnInit, Output, EventEmitter } from '@angular/core';
-import { Router } from '@angular/router'
+import { Router } from '@angular/router';
+import { LoginService } from '../../../services/login.service';
 
 
 @Component({
@@ -11,7 +12,7 @@ export class TopNavComponent implements OnInit {
 
   @Output() sideNavToggled = new EventEmitter<void>();
   
-  constructor(private readonly router: Router) { }
+  constructor(private readonly router: Router, private login:LoginService) { }
 
   ngOnInit(): void {
   }
@@ -21,10 +22,11 @@ export class TopNavComponent implements OnInit {
   }
 
   //Cerrar sesión 
-  onLoggedout():void {
-    //'liloggedin'
-    localStorage.removeItem('');
-    this.router.navigate(['/']);
+  logout(){
+    localStorage.clear();
+    this.login.logout();
+    this.router.navigate(['/login']);
   }
+
 
 }

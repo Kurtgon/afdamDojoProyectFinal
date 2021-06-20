@@ -9,14 +9,7 @@
     </div>
 
     <span class="nav-spacer"></span>
-    <!--Buscador-->
-    <!--
-    <form class="hidden-sm" style="margin-right: 20px; margin-top: 8px;">
-        <mat-form-field sytle="font-size: 1rem;">
-            <input matInput placeholder="Búsqueda">
-        </mat-form-field>
-    </form>
-    -->
+   
     <button class="hiddem-sm" mat-icon-button [mat-menu-trigger-for]="profile">
         <mat-icon>
             account_circle
@@ -40,9 +33,15 @@
 
         <button mat-menu-item>
             <mat-icon>
+                login
+            </mat-icon>
+            <span routerLink="/login">Iniciar Sesión</span>
+        </button>
+        <button mat-menu-item>
+            <mat-icon>
                 logout
             </mat-icon>
-            <span>Cerrar Sesión</span>
+            <span (click)="logout()">Cerrar Sesión</span>
         </button>
     </mat-menu>
 

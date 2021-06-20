@@ -1,0 +1,38 @@
+.container {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap; 
+ }
+ 
+ 
+ .fotoProfesor {
+     margin: 2em;
+     background-size: cover;     
+ }
+ 
+ .detallesProfesor {
+     flex-basis: 25%;
+     margin: 2em;
+     box-shadow: 0 4px 8px 0 rgba(3, 3, 3, 0.2);
+     margin: auto;
+     text-align: center;
+     width: 40vw;
+   }
+   
+   .botonCard{
+     border: none;
+     outline: 0;
+     padding: 4px;
+     color: white;
+    
+     text-align: center;
+     cursor: pointer;
+     width: 20%;
+     font-size: 18px;
+     background: rgb(194, 0, 0);
+   }
+ 
+   .botonCard button:hover {
+     opacity: 0.9;
+   }
+ 
