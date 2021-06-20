@@ -31,7 +31,7 @@ public class UserService implements UserDetailsService {
 	// Inyectamos el repositorio del alumno
 	@Autowired
 	private AlumnoRepository alumnoRepository;
-	
+
 	// Inyectamos el repositorio del profesor
 	@Autowired
 	private ProfesorRepository profesorRepository;
@@ -56,7 +56,7 @@ public class UserService implements UserDetailsService {
 
 	// Creamos el método para crear el alumno
 	public UserDTO createNewAlumno(AlumnoSignUpDTO dto) throws UserException {
-		//Comprobamos que el usuario no existe
+		// Comprobamos que el usuario no existe
 		User user = userRepository.findUsuarioByUsername(dto.getUsername());
 		if (user != null) {
 			throw new UserException("El usuario ya existe");
@@ -77,7 +77,7 @@ public class UserService implements UserDetailsService {
 
 	// Creamos el método para crear al profesor
 	public UserDTO createNewProfesor(ProfesorSignUpDTO dto) throws UserException {
-		//Comprobamos que el usuario no existe
+		// Comprobamos que el usuario no existe
 		User user = userRepository.findUsuarioByUsername(dto.getUsername());
 		if (user != null) {
 			throw new UserException("El usuario ya existe");
@@ -92,7 +92,7 @@ public class UserService implements UserDetailsService {
 		profesor.setUser(newUser);
 		// Guardamos el profesor
 		profesorRepository.save(profesor);
-		
+
 		return userDTOConverter.fromUsuarioToUsuarioDTO(newUser);
 
 	}

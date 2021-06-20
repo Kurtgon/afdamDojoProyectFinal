@@ -22,6 +22,8 @@ public class DTOConverter {
 	public Alumno fromAlumnoDTOToAlumno(AlumnoDTO dto) {
 		// Creamos un alumno
 		Alumno alumno = new Alumno();
+		
+		//Alumno alumno = new Alumno(dto.getContact(), Disciplinas.valueOf(dto.getDiscipline()), null );
 
 		// Nos creamos el Set de Allergy
 		Alergia alergia = alergiaRepository.findAlergiaByAlergyName(dto.getAllergy());

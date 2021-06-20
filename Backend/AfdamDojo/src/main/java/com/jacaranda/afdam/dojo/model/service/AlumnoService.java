@@ -107,6 +107,19 @@ public class AlumnoService {
 		origin.setAllergy((sent.getAllergy() == null) ? origin.getAllergy() : allergys);
 		
 	}
+	
+	// Eliminar alumno
+//	public AlumnoDTO deleleAlumno(String curp) throws AlumnoException{
+//		
+//		Alumno alumno = alumnoRepo.findAlumnoByCurp(curp);
+//		
+//		if ( alumno == null) {
+//			
+//			throw new AlumnoException("Error no se puede eliminar, el alumno no existe");
+//		}
+//		
+//		
+//	}
 }
 
 
